@@ -1,0 +1,39 @@
+﻿<Window x:Class="SchedulerGridDragDrop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+        xmlns:dxsch="http://schemas.devexpress.com/winfx/2008/xaml/scheduler"
+        Title="MainWindow" Height="600" Width="1100">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!-- SchedulerControl -->
+        <dxsch:SchedulerControl Name="schedulerControl1" ActiveViewType="Month" 
+                                AppointmentDrop="schedulerControl1_AppointmentDrop" PreviewMouseDown="schedulerControl1_PreviewMouseDown" />
+        
+        <!-- Splitter -->
+        <GridSplitter Grid.Column="1" Width="5" Background="LightBlue"
+                      HorizontalAlignment="Center" VerticalAlignment="Stretch"
+                      ShowsPreview="False" />
+
+        <!-- GridControl -->
+        <dxg:GridControl x:Name="gridControl1" Grid.Column="2" AllowDrop="True">
+            <dxg:GridControl.View>
+                <dxg:TableView x:Name="tableView1" ShowGroupPanel="False" AllowPerPixelScrolling="True"
+                               PreviewMouseDown="tableView1_PreviewMouseDown" PreviewMouseMove="tableView1_PreviewMouseMove" PreviewDrop="tableView1_PreviewDrop"/>
+            </dxg:GridControl.View>
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn FieldName="Subject" Header="Subject" Width="160" />
+                <dxg:GridColumn FieldName="Duration" Header="Duration (m)" Width="100"/>
+                <dxg:GridColumn FieldName="Priority" Header="Priority" Width="65" />
+                <dxg:GridColumn FieldName="Severity" Header="Severity" Width="65" />
+                <dxg:GridColumn FieldName="Description" Header="Description" Width="300" />
+            </dxg:GridControl.Columns>
+        </dxg:GridControl>
+    </Grid>
+</Window>
