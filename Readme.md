@@ -6,7 +6,7 @@
 * [AppointmentsResizeHandler.cs](./CS/CustomHandlers/AppointmentsResizeHandler.cs) (VB: [AppointmentsResizeHandler.vb](./VB/CustomHandlers/AppointmentsResizeHandler.vb))
 * [HitTimeCellInfo.cs](./CS/CustomHandlers/HitTimeCellInfo.cs) (VB: [HitTimeCellInfo.vb](./VB/CustomHandlers/HitTimeCellInfo.vb))
 * [SchedulerMoveEventHandler.cs](./CS/CustomHandlers/SchedulerMoveEventHandler.cs) (VB: [SchedulerMoveEventHandler.vb](./VB/CustomHandlers/SchedulerMoveEventHandler.vb))
-* [MainWindow.xaml](./CS/MainWindow.xaml) (VB: [MainWindow.xaml.vb](./VB/MainWindow.xaml.vb))
+* [MainWindow.xaml](./CS/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/MainWindow.xaml))
 * [MainWindow.xaml.cs](./CS/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/MainWindow.xaml.vb))
 <!-- default file list end -->
 # How to implement precise drag-and-drop and resizing of appointments in Day View/Work Week View (WPF version)
